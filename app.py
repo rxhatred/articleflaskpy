@@ -26,8 +26,8 @@ def convert(data):
 
 app = Flask(__name__)
 
-app.config['MONGO_DBNAME'] = 'bbc'
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/bbc'
+app.config['MONGO_DBNAME'] = 'scrapyproject'
+app.config['MONGO_URI'] = 'mongodb://localhost:27017/scrapyproject'
 
 mongo = PyMongo(app)
 
