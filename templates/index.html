@@ -29,7 +29,7 @@
     
     <div class="container" ng-app="app" ng-controller="index">
         <h1>Scrapy News Data</h1>
-        <input type='text' class='form-control' id='searchQ' onkeyup="myFunction()">
+        <input type='text' class='form-control' id='searchQ' onkeyup="search()">
         <section id="itemList">
         {% for item in out %}
             <article>
@@ -54,14 +54,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-    function myFunction() {
-        // Declare variables
+    function search() {
+
         var input, filter, section, article, a, i;
         input = document.getElementById('searchQ');
         filter = input.value.toUpperCase();
         section = document.getElementById("itemList");
         article = section.getElementsByTagName('article');
-        // Loop through all list items, and hide those who don't match the search query
+
         for (i = 0; i < article.length; i++) {
             a = article[i].getElementsByTagName("a")[0];
             console.log(a.innerHTML);
